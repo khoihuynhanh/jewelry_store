@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toasts.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="wrapper">
+            <div class="navbar_left">
+                <ul class="navbar_list">
+                    <li class="navbar_item">
+                        <a href="#" class="navbar_link active" onclick="handleHome()">home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="navbar_link" onclick="handleShop()">shop</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#" class="navbar_link" onclick="handleAbout()">about</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar_logo" onclick="handleScrollTop()">
+                <img src="images/logo-regular.png" class="navbar_img">
+            </div>
+            <div class="navbar_right">
+                <p class="navbar_price">$ 0</p>
+                <i class="fa-solid fa-bag-shopping navbar_link" onclick="handleCart()">
+                    <span class="cart_count">0</span>
+                </i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home -->
+    <div class="home_container">
+        <!-- hero -->
+        <div class="hero">
+            <div class="hero_text">
+                <h1 class="hero_title">Jewelry of Precious Craft</h1>
+                <h3 class="hero_des">Because every piece caries a precious story</h3>
+                <div class="btn_all">
+                    <button class="btn" onclick="handleShop()">
+                        <a href="#">explore now</a>
+                    </button>
+                </div>
+            </div>
+            <div class="hero_img">
+                <img src="images/hero-01.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- category -->
+        <section class="category_section">
+            <div class="wrapper">
+                <h2 class="section_title">shop by category</h2>
+                <div class="category_images">
+                    <div class="category_img">
+                        <img src="images/b5.jpg" alt="">
+                        <h2>bracelets</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/e6.jpg" alt="">
+                        <h2>earrings</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/n7.jpg" alt="">
+                        <h2>necklaces</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/r7.jpg" alt="">
+                        <h2>rings</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- story -->
+        <section class="story_section">
+            <div class="wrapper">
+                <div class="section_icon">
+                    <img src="images/icon.png" alt="">
+                </div>
+                <h2 class="section_title">We make high-quality, handcrafted jewelry for over a decade, having the same
+                    passion & values!</h2>
+                <p class="section_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat eligendi
+                    recusandae
+                    quasi ipsam autem ex dolore vel laboriosam voluptatibus illum.</p>
+                <div class="btn_all story_btn">
+                    <button class="btn" onclick="handleAbout()">
+                        <a href="#">read more</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- arrivals -->
+        <section class="arrival_section">
+            <div class="wrapper">
+                <h2 class="section_title">new arrivals</h2>
+                <div class="category_images">
+                    <div class="category_img">
+                        <img src="images/b4.jpg" alt="">
+                        <h2>bracelets</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/e3.jpg" alt="">
+                        <h2>earrings</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/n5.jpg" alt="">
+                        <h2>necklaces</h2>
+                    </div>
+                    <div class="category_img">
+                        <img src="images/r5.jpg" alt="">
+                        <h2>rings</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- discover -->
+        <section class="discover_section">
+            <div class="discover">
+                <div class="discover_info">
+                    <div class="discover_wrapper">
+                        <div class="discover_img"></div>
+                        <h2 class="discover_title">Exquisite Jewelry for Everyone</h2>
+                        <div class="separate_bottom"></div>
+                        <h3 class="discover_sub">Discover our awesome rings collection</h3>
+                        <div class="btn_all">
+                            <button class="btn" onclick="handleAbout()">
+                                <a href="#">read more</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="discover_banner">
+                    <img src="images/bg-01.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section class="testimonial_section">
+            <div class="wrapper">
+                <h2 class="section_title">testimonials</h2>
+                <div class="testimonial_text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium consequuntur veritatis
+                        impedit
+                        quos quasi voluptatem animi consectetur placeat expedita iusto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- collection -->
+        <section class="collection_section">
+            <div class="wrapper">
+                <div class="collection_list">
+                    <div class="collection_item">
+                        <img src="images/bg-11.jpg" alt="" class="collection_img">
+                        <div class="collection_text">
+                            <div class="collection_title">
+                                <h2>lammar collection</h2>
+                            </div>
+                            <div class="collection_des">
+                                <h4>the perfect match for any outfit</h4>
+                            </div>
+                            <div class="collection_price">
+                                <h6>Starting at $ 350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection_item">
+                        <img src="images/bg-10.jpg" alt="" class="collection_img">
+                        <div class="collection_text">
+                            <div class="collection_title">
+                                <h2>fermina collection</h2>
+                            </div>
+                            <div class="collection_des">
+                                <h4>the perfect match for any outfit</h4>
+                            </div>
+                            <div class="collection_price">
+                                <h6>Starting at $ 350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collection_item">
+                        <img src="images/bg-09.jpg" alt="" class="collection_img">
+                        <div class="collection_text">
+                            <div class="collection_title">
+                                <h2>tolentino collection</h2>
+                            </div>
+                            <div class="collection_des">
+                                <h4>the perfect match for any outfit</h4>
+                            </div>
+                            <div class="collection_price">
+                                <h6>Starting at $ 350.00</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- feature -->
+        <section class="feature_section">
+            <div class="wrapper">
+                <h2 class="section_title">feature products</h2>
+                <div class="feature_content">
+                    <div class="feature_list">
+                        <div class="feature_item">
+                            <img src="images/n7.jpg" alt="" class="feature_img">
+                            <h2 class="feature_name">necklaces</h2>
+                        </div>
+                        <div class="feature_item">
+                            <img src="images/r7.jpg" alt="" class="feature_img">
+                            <h2 class="feature_name">rings</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- precious -->
+        <section class="precious_section">
+            <div class="wrapper">
+                <h2 class="section_title">precious metals</h2>
+                <div class="precious_list">
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-005.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">14k solid gold</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-006.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">sterling silver</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-007.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">gold vermeil</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- handcrafted -->
+        <section class="handcrafted_section">
+            <div class="wrapper handcrafted_container">
+                <img src="images/img-01.jpg" alt="">
+                <div class="handcrafted_content">
+                    <div class="handcrafted_wrapper">
+                        <h2 class="handcrafted_title">high-quality, handcrafted jewelry</h2>
+                        <p class="handcrafted_des">discover our bracelets collection</p>
+                        <div class="handcrafted_img">
+                            <img src="images/img-02.png" alt="">
+                        </div>
+                        <div class="btn_all">
+                            <button class="btn" onclick="handleAbout()">
+                                <a href="#">explore</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- discount -->
+        <section class="discount_section">
+            <div class="wrapper">
+                <h2 class="section_title">25% discount on making charges</h2>
+                <p class="discount_des">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed cupiditate
+                    blanditiis
+                    nobis nulla, tempora asperiores cum nesciunt at sapiente aspernatur!</p>
+                <div class="btn_all">
+                    <button class="btn" onclick="handleShop()">
+                        <a href="#">visit our stores</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- shop -->
+    <div class="shop_container hide">
+        <section class="shop_section">
+            <div class="wrapper">
+                <div class="shop_wrapper">
+                    <div class="shop_header">
+                        <button type="rings">rings</button>
+                        <button type="earrings">earrings</button>
+                        <button type="all" class="active">all</button>
+                        <button type="bracelets">bracelets</button>
+                        <button type="necklaces">necklaces</button>
+                    </div>
+                    <div class="shop_list">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- cart -->
+    <div class="cart_container hide">
+        <div class="no_cart">
+            <img src="images/bg-08.jpg" style="height: 100vh; width: 100%">
+            <h1 onclick="handleShop()">continue shopping</h1>
+        </div>
+        <section class="cart_section">
+            <div class="wrapper">
+                <div class="cart_wrapper">
+                    <h2 class="section_title">cart</h2>
+                    <div class="cart_inner">
+                        <div class="cart_info">
+                            <table class="cart_table">
+                                <thead>
+                                    <tr>
+                                        <th>image</th>
+                                        <th>product</th>
+                                        <th>price</th>
+                                        <th>quantity</th>
+                                        <th>subtotal</th>
+                                        <th>remove</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="cart_item"></tbody>
+                            </table>
+                        </div>
+                        <div class="cart_money">
+                            <h2>cart totals</h2>
+                            <div class="cart_total_wrapper">
+                                <p>total</p>
+                                <div class="btn_all">
+                                    <button class="btn" onclick="handleCheckOut()">
+                                        <a href="#">check out</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- about -->
+    <div class="about_container hide">
+        <section class="gallery_section">
+            <div class="wrapper">
+                <h2 class="section_title">our story</h2>
+                <div class="image_list_wrapper">
+                    <div class="image_item">
+                        <img src="images/bg-01.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-03.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-04.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-005.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-006.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-007.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-08.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/img-01.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-02.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-09.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-10.jpg" alt="">
+                    </div>
+                    <div class="image_item">
+                        <img src="images/bg-11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="gallery_content">
+                    <span class="control prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="control next">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                    <div class="gallery_inner">
+                        <img src="" alt="">
+                    </div>
+                    <i class="fas fa-times gallery_close"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="about_header_section">
+            <div class="wrapper" style="padding: 150px 0;">
+                <div class="about_header_img">
+                    <div></div>
+                </div>
+                <div class="about_header_text">
+                    <h1>We make high-quality, handcrafted jewelry for over a decade, having the same passion & values!
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eligendi fugiat, alias deserunt
+                        totam nihil, cum facilis nesciunt hic molestias, omnis esse magni sapiente consequuntur eius
+                        quas?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- precious -->
+        <section class="precious_section">
+            <div class="wrapper">
+                <h2 class="section_title">precious metals</h2>
+                <div class="precious_list">
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-005.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">14k solid gold</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-006.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">sterling silver</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                    <div class="precious_item">
+                        <div class="precious_img">
+                            <img src="images/bg-007.jpg" alt="">
+                        </div>
+                        <h3 class="precious_title">gold vermeil</h3>
+                        <p class="precious_des">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore vel
+                            officiis obcaecati mollitia harum aperiam sunt modi reiciendis inventore cum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- toast -->
+    <div id="toasts"></div>
+
+    <!-- footer -->
+    <!-- <footer>
+        <div class="footer_img">
+            <img src="images/logo-regular.png" alt="">
+        </div>
+        <ul class="footer_list">
+            <li class="footer_item">
+                <a href="#" class="footer_link">
+                    home
+                </a>
+            </li>
+            <li class="footer_item">
+                <a href="#" class="footer_link">
+                    shop
+                </a>
+            </li>
+            <li class="footer_item">
+                <a href="#" class="footer_link">
+                    about
+                </a>
+            </li>
+        </ul>
+    </footer> -->
+
+    <!-- script -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
